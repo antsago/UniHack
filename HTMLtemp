@@ -6,17 +6,30 @@
 </head>
 
 <body>
-<div style="background-color:#C90; padding-left:50px; padding-top:50px;">
-  <div style="font-size:36px; padding-top:50px;"><strong>I SAID</strong></div>
+<style>
+wrapper {background-color:#C90;
+         position:absolute;
+         left:0;
+         top:0;
+         width:842px;
+         height:1191px;}
+isaid {position:relative;
+       left:20%;
+       top:20%;
+       width:40%;
+       height:10opx;
+       font-size:100px;
+       color:#6C0;}
+<div id="wrapper">
+  <div id="isaid"><strong>I SAID</strong></div>
   <div>TEXT HERE</div>
   <div style="font-size:36px; padding-top:50px;"><strong>UNI DID</strong></div>
   <div style="padding-bottom:40px;">MOAR TEXT</div>  
+  <div style="background-color:#C00; padding-top:30px; padding-bottom:30px;">even more text but these are tiny</div>
+  <div style="background-color:#000; width:100px; height:50px; color:#FFF; text-align:center; position:absolute; left:50px; top:300px;">LOGO</div>
+  <div style="position:absolute; left:50px; top:20px; background-color:#306; color:#FFF; width:200px; height:50px;">MAN UNI LOGO</div>
+  <div style="position:absolute; top:30px; right:50px;">UNION<br />LOGO</div>
+  <div style="position:absolute; right:50px; top:350px;">VERTICAL<br /> TEXT</div>
 </div>
-<div style="background-color:#C00; padding-top:30px; padding-bottom:30px;">even more text but these are tiny</div>
-<div style="background-color:#000; width:100px; height:50px; color:#FFF; text-align:center; position:absolute; left:50px; top:300px;">LOGO</div>
-<div style="position:absolute; left:50px; top:20px; background-color:#306; color:#FFF; width:200px; height:50px;">MAN UNI LOGO</div>
-<div style="position:absolute; top:30px; right:50px;">UNION<br />LOGO</div>
-<div style="position:absolute; right:50px;
-top:350px;">VERTICAL<br /> TEXT</div>
 </body>
 </html>
