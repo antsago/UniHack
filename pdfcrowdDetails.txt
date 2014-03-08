@@ -1,0 +1,27 @@
+Account information:
+Username: Unihack
+API key: 54f7ab4ccd6dac521092608a3456cb74
+Account: https://pdfcrowd.com/user/account/
+
+Your account is credited with 100 conversion tokens. In case you
+would need more testing to evaluate the API just let us know and
+we will hapilly give you another bunch of tokens.
+
+API:
+API Home: http://pdfcrowd.com/html-to-pdf-api/
+Tips & Tricks: http://pdfcrowd.com/hub/
+
+Support:
+Email: support@pdfcrowd.com
+Forums: http://pdfcrowd.com/forums/
+FAQ: http://pdfcrowd.com/faq/
+
+Status:
+Service updates: http://pdfcrowd.com/forums/list.php?9
+Status: http://status.pdfcrowd.com/193853
+Twitter: http://twitter.com/pdfcrowd
+
+
+Thanks for evaluating Pdfcrowd!
+-- 
+vThe Pdfcrowd Team
