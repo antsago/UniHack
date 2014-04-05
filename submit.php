@@ -97,8 +97,6 @@ $image->annotateImage($draw,
 
 
 // LOGO 
-$draw = new ImagickDraw();
-$draw->setFont('Ubuntu');
 $draw->setFillColor('black');
 $draw->setFontSize($format[$current]["logoSize"]);
 $image->annotateImage($draw,
