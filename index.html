@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 	<head>
 		<title>Poster Generator</title>
@@ -12,10 +12,14 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<style>
+		span > img{
+			max-width: 100%;
+		}
+
 		.colour-item{
 			display: inline-block;
-			width: 20px;
-			height: 15px;
+			width: 50px;
+			height: 35px;
 		}
 
 		.colour-item-1{
@@ -26,6 +30,9 @@
 		}
 		.colour-item-3{
 			background-color: yellow;
+		}
+		.colour-item-4{
+			background-color: pink;
 		}
 
 		.selected-colour{
@@ -54,23 +61,19 @@
 						<input class="form-control selected-colour-input" type="hidden" value="" name="selected-colour" class="hidden-selected-colour">
 						
 						<div class="group form-group">
-							<span class="colour-item colour-item-1"></span>
-							<span class="colour-item colour-item-2"></span>
-							<span class="colour-item colour-item-3"></span>
+							<span data-color="blue" class="colour-item colour-item-1"></span>
+							<span data-color="orange" class="colour-item colour-item-2"></span>
+							<span data-color="yellow" class="colour-item colour-item-3"></span>
+							<span data-color="corporate" class="colour-item colour-item-4"></span>
 						</div>
 						<div class="group form-group">
-							<h3>Select Logo:</h3>
-							<input class="image-selector" type="radio" name="selected-image" value="images/logos/unitsurveylogo.png">
-							<img class="image" src="images/logos/unitsurveylogo.png" alt="">
-							<input class="image-selector" name="selected-image" type="radio" value="images/logos/NSSlogo.png">
-							<img class="image" src="images/logos/NSSlogo.png" alt="">
-						</div>
-						<div class="group form-group">
-							<h3>Select Logo:</h3>
+							<h3>Select Size:</h3>
 							<label>Screen saver</label>
 							<input type="radio" value="screensaver" name="size" />
 							<label>Digisign</label>
 							<input type="radio" value="digisign" name="size" />
+							<label>A3</label>
+							<input type="radio" value="a3" name="size" />
 							</div>
 						<div class="group form-group">
 							<h3>I said:</h3>
@@ -79,6 +82,11 @@
 						<div class="group form-group">
 							<h3>Uni Did:</h3>
 							<textarea  class="form-control" rows="7" name="unidid"></textarea>
+						</div>
+
+						<div class="group form-group">
+							<h3>Survey Source:</h3>
+							<input class="form-control" name="survey-source" />
 						</div>
 						<div class="group">
 							<input type="submit" class="btn btn-primary">
@@ -91,11 +99,45 @@
 	<script src="js/jquery.js"></script>
 	<script>
 		$(".colour-item").on("click", function(){
+
 			var $this = $(this),
-			selectedColour = $this.css("background-color");
-			$(".selected-colour").css("background-color", selectedColour);
+			selectedColour = $this.attr("data-color"),
+			bgColor = $this.css("background-color");
+			$(".selected-colour").css("background-color", bgColor);
 			$(".hidden-selected-colour").val(selectedColour);
 			$(".selected-colour-input").val(selectedColour);
 		});
+
+		$("form").on("submit", function(){
+			var isValid = function(){
+				var valid = true;
+				if($.trim($("textarea[name=isaid]").val()).length == 0){
+					valid = false;
+				}
+
+				if($.trim($("textarea[name=unidid]").val()).length == 0){
+					valid = false;
+				}
+
+				if($.trim($("input[name=selected-colour]").val()).length == 0){
+					valid = false;
+				}
+
+				if($("input[type=radio]:checked").length == 0){
+					valid = false;
+				}
+
+				return valid;
+			}
+
+			if(!isValid()){
+				alert('You must select all options');
+				return false;
+			}
+
+
+		});
 	</script>
+
 </html>
+
